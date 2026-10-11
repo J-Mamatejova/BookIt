@@ -1,93 +1,99 @@
-# MamatejovaVAII
+# BookIt – Rezervačný systém služieb
+
+Janka Mamatejová
+
+5ZYI32
 
 
+## Stručný opis projektu
+BookIt je webová aplikácia na vyhľadávanie poskytovateľov služieb a rezerváciu termínov. Je určená napríklad pre kaderníctva, nechtové štúdiá, lekárov a ich klientov.
 
-## Getting started
+Poskytovatelia si môžu vytvoriť profil, spravovať ponuku služieb a dostupné termíny. Klienti si môžu prezerať profily poskytovateľov a rezervovať si termín s registráciou alebo bez nej.
 
-To make it easy for you to get started with GitLab, here's a list of recommended next steps.
+## Role v projekte
 
-Already a pro? Just edit this README.md and make it your own. Want to make it easy? [Use the template at the bottom](#editing-this-readme)!
+Návštevník: Vyhľadáva poskytovateľov, prezerá služby a rezervuje termíny bez registrácie.
 
-## Add your files
+Registrovaný klient: Vytvára a spravuje svoje rezervácie.
 
-* [Create](https://docs.gitlab.com/user/project/repository/web_editor/#create-a-file) or [upload](https://docs.gitlab.com/user/project/repository/web_editor/#upload-a-file) files
-* [Add files using the command line](https://docs.gitlab.com/topics/git/add_files/#add-files-to-a-git-repository) or push an existing Git repository with the following command:
+Poskytovateľ služby: Spravuje svoj profil, služby, dostupné termíny a rezervácie.
 
-```
-cd existing_repo
-git remote add origin https://gitlab.kicon.fri.uniza.sk/mamatejova/mamatejovavaii.git
-git branch -M main
-git push -uf origin main
-```
+Administrátor: Spravuje používateľov a kontroluje obsah aplikácie.
 
-## Integrate with your tools
+## Prípady použitia podľa rolí
 
-* [Set up project integrations](https://gitlab.kicon.fri.uniza.sk/mamatejova/mamatejovavaii/-/settings/integrations)
+Návštevník: Vyhľadá poskytovateľa, prezrie si jeho služby a rezervuje termín.
 
-## Collaborate with your team
+Registrovaný klient: Prihlási sa, zobrazí si svoje rezervácie a môže ich zrušiť.
 
-* [Invite team members and collaborators](https://docs.gitlab.com/user/project/members/)
-* [Create a new merge request](https://docs.gitlab.com/user/project/merge_requests/creating_merge_requests/)
-* [Automatically close issues from merge requests](https://docs.gitlab.com/user/project/issues/managing_issues/#closing-issues-automatically)
-* [Enable merge request approvals](https://docs.gitlab.com/user/project/merge_requests/approvals/)
-* [Set auto-merge](https://docs.gitlab.com/user/project/merge_requests/auto_merge/)
+Poskytovateľ: Upraví profil, spravuje služby a termíny a zobrazuje rezervácie.
 
-## Test and Deploy
+Administrátor: Zobrazí používateľov a spravuje profily poskytovateľov.
 
-Use the built-in continuous integration in GitLab.
+## Plánované entity
 
-* [Get started with GitLab CI/CD](https://docs.gitlab.com/ci/quick_start/)
-* [Analyze your code for known vulnerabilities with Static Application Security Testing (SAST)](https://docs.gitlab.com/user/application_security/sast/)
-* [Deploy to Kubernetes, Amazon EC2, or Amazon ECS using Auto Deploy](https://docs.gitlab.com/topics/autodevops/requirements/)
-* [Use pull-based deployments for improved Kubernetes management](https://docs.gitlab.com/user/clusters/agent/)
-* [Set up protected environments](https://docs.gitlab.com/ci/environments/protected_environments/)
+Používateľ: Údaje o účte a používateľská rola.
 
-***
+Profil poskytovateľa: Názov prevádzky, adresa, kontakt a popis.
 
-# Editing this README
+Služba: Názov, popis, cena a dĺžka trvania.
 
-When you're ready to make this README your own, just edit this file and use the handy template below (or feel free to structure it however you want - this is just a starting point!). Thanks to [makeareadme.com](https://www.makeareadme.com/) for this template.
+Termín: Dátum, čas a dostupnosť.
 
-## Suggestions for a good README
+Rezervácia: Vybraný termín, údaje o klientovi a stav rezervácie.
 
-Every project is different, so consider which of these sections apply to yours. The sections used in the template are suggestions for most open source projects. Also keep in mind that while a README can be too long and detailed, too long is better than too short. If you think your README is too long, consider utilizing another form of documentation rather than cutting out information.
+Fotografia: Súbory priradené k profilu poskytovateľa.
 
-## Name
-Choose a self-explaining name for your project.
+## Vzťahy medzi entitami
 
-## Description
-Let people know what your project can do specifically. Provide context and add a link to any reference visitors might be unfamiliar with. A list of Features or a Background subsection can also be added here. If there are alternatives to your project, this is a good place to list differentiating factors.
+Jeden používateľ môže mať jeden profil poskytovateľa. Profil môže obsahovať viacero služieb, termínov a fotografií. Každý termín patrí ku konkrétnemu poskytovateľovi a službe a môže mať jednu aktívnu rezerváciu. Registrovaný klient môže mať viacero rezervácií.
 
-## Badges
-On some READMEs, you may see small images that convey metadata, such as whether or not all the tests are passing for the project. You can use Shields to add some to your README. Many services also have instructions for adding a badge.
+## Hlavné stránky aplikácie
 
-## Visuals
-Depending on what you are making, it can be a good idea to include screenshots or even a video (you'll frequently see GIFs rather than actual videos). Tools like ttygif can help, but check out Asciinema for a more sophisticated method.
+Domovská stránka: Vyhľadávanie poskytovateľov.
 
-## Installation
-Within a particular ecosystem, there may be a common way of installing things, such as using Yarn, NuGet, or Homebrew. However, consider the possibility that whoever is reading your README is a novice and would like more guidance. Listing specific steps helps remove ambiguity and gets people to using your project as quickly as possible. If it only runs in a specific context like a particular programming language version or operating system or has dependencies that have to be installed manually, also add a Requirements subsection.
+Výsledky vyhľadávania: Zoznam poskytovateľov a filtrovanie.
 
-## Usage
-Use examples liberally, and show the expected output if you can. It's helpful to have inline the smallest example of usage that you can demonstrate, while providing links to more sophisticated examples if they are too long to reasonably include in the README.
+Profil poskytovateľa: Informácie, služby a dostupné termíny.
 
-## Support
-Tell people where they can go to for help. It can be any combination of an issue tracker, a chat room, an email address, etc.
+Rezervácia: Výber termínu a zadanie údajov.
 
-## Roadmap
-If you have ideas for releases in the future, it is a good idea to list them in the README.
+Prihlásenie a registrácia: Správa používateľského účtu.
 
-## Contributing
-State if you are open to contributions and what your requirements are for accepting them.
+Moje rezervácie: Prehľad rezervácií klienta.
 
-For people who want to make changes to your project, it's helpful to have some documentation on how to get started. Perhaps there is a script that they should run or some environment variables that they need to set. Make these steps explicit. These instructions could also be useful to your future self.
+Dashboard poskytovateľa: Správa profilu, služieb a termínov.
 
-You can also document commands to lint the code or run tests. These steps help to ensure high code quality and reduce the likelihood that the changes inadvertently break something. Having instructions for running tests is especially helpful if it requires external setup, such as starting a Selenium server for testing in a browser.
+Administrácia: Správa používateľov a profilov.
 
-## Authors and acknowledgment
-Show your appreciation to those who have contributed to the project.
+## Rozdelenie funkcionality
 
-## License
-For open source projects, say how it is licensed.
+Základné funkcie
 
-## Project status
-If you have run out of energy or time for your project, put a note at the top of the README saying that development has slowed down or stopped completely. Someone may choose to fork your project or volunteer to step in as a maintainer or owner, allowing your project to keep going. You can also make an explicit request for maintainers.
+- Registrácia, prihlasovanie a používateľské role.
+
+- Správa profilov a služieb.
+
+- Vytváranie a správa dostupných termínov.
+
+- Rezervovanie a rušenie termínov.
+
+- Prehľad rezervácií.
+
+- Vyhľadávanie a filtrovanie poskytovateľov.
+
+- Validácia vstupov a kontrola oprávnení.
+
+- Nahrávanie a správa fotografií.
+
+Rozširujúce funkcie
+
+- Automatické generovanie termínov podľa otváracích hodín.
+
+- mailové potvrdenia a pripomienky.
+
+Kalendárové zobrazenie rezervácií.
+
+Hodnotenia a recenzie poskytovateľov.
+
+Zobrazenie prevádzok na mape.
