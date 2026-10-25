@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BookIt - Salón Bella</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="site-header">
+    <a class="logo" href="index.html">BookIt</a>
+    <nav class="main-nav" aria-label="Hlavná navigácia">
+        <a href="index.html">Domov</a>
+        <a href="index.html" >Vyhľadať služby</a>
+        <a href="index.html">Moje rezervácie</a>
+    </nav>
+    <div class="account-actions">
+        <a class="button" href="#">Prihlásiť sa</a>
+        <a class="button button-dark" href="#">Registrovať</a>
+    </div>
+</header>
+
+<main class="page-content">
+    <a class="back-link" href="index.html">← Späť na výsledky vyhľadávania</a>
+    <section class="booking-top" aria-labelledby="business-title">
+        <div class="placeholder large-placeholder"><span>Fotografia prevádzky</span></div>
+        <div class="business-info">
+            <p class="category">Manikúra a pedikúra</p>
+            <h1 id="business-title">Salón Bella</h1>
+            <p>Hlavná 12, Žilina</p>
+            <p class="description">Informácie o prevádzke.</p>
+            <p>Telefón: +421 905 123 456</p>
+            <p>E-mail: info@salonbella.sk</p>
+        </div>
+        <aside class="summary-box opening-hours" aria-labelledby="hours-title">
+            <h2 id="hours-title">Otváracie hodiny</h2>
+            <p class="muted">Pondelok – piatok<br><span>09:00 – 18:00</span></p>
+            <p class="muted">Sobota<br><span>09:00 – 13:00</span></p>
+            <p class="muted">Nedeľa<br><span>Zatvorené</span></p>
+        </aside>
+    </section>
+
+    <div class="booking-grid">
+        <div>
+            <section class="step" aria-labelledby="service-title">
+                <h2 id="service-title">1. Vyberte službu</h2>
+                <p class="muted">Vyberte jednu službu. Ceny sú konečné.</p>
+                <div class="service-option">
+                    <strong>Manikúra</strong><strong class="price">25 €</strong>
+                    <button class="button-dark" type="button">✓ Vybrané</button>
+                </div>
+                <div class="service-option">
+                    <strong>Manikúra s gél lakom</strong><strong class="price">35 €</strong>
+                    <button type="button">Vybrať</button>
+                </div>
+                <div class="service-option">
+                    <strong>Pedikúra</strong><strong class="price">30 €</strong>
+                    <button type="button">Vybrať</button>
+                </div>
+            </section>
+
+            <section class="step" aria-labelledby="date-title">
+                <h2 id="date-title">2. Vyberte dátum a čas</h2>
+                <p class="muted">Manikúra · 60 min · 25 €</p>
+                <div class="calendar-time">
+                    <div class="calendar">
+                        <div class="calendar-title">
+                            <button type="button">‹</button>
+                            <span>Október 2026</span>
+                            <button type="button">›</button>
+                        </div>
+                        <div class="calendar-days">
+                            <span>Po</span><span>Ut</span><span>St</span><span>Št</span><span>Pi</span><span>So</span><span>Ne</span>
+                            <span></span><span></span><span></span><span>1</span><span>2</span><span class="muted-day">3</span><span class="muted-day">4</span>
+                            <span class="muted-day">5</span><span class="muted-day">6</span><span class="muted-day">7</span><span class="muted-day">8</span><span class="muted-day">9</span><span class="muted-day">10</span><span class="muted-day">11</span>
+                            <span class="muted-day">12</span><span class="muted-day">13</span><span class="muted-day">14</span><span class="muted-day">15</span><span class="muted-day">16</span><span class="muted-day">17</span><span class="muted-day">18</span>
+                            <span class="selected-day">19</span><span>20</span><span>21</span><span>22</span><span>23</span><span>24</span><span class="muted-day">25</span>
+                            <span>26</span><span>27</span><span>28</span><span>29</span><span>30</span><span>31</span><span></span>
+                        </div>
+                    </div>
+                    <div>
+                        <h3>Pondelok, 19. októbra 2026</h3>
+                        <p class="muted">Vyberte čas začiatku návštevy.</p>
+                        <div class="time-buttons">
+                            <button type="button">09:00</button><button class="selected" type="button">10:00</button><button type="button">11:00</button>
+                            <button class="unavailable" type="button">12:00</button><button type="button">13:00</button><button class="unavailable" type="button">14:00</button>
+                        </div>
+                        <div class="selected-time">
+                            <strong>Vybraný termín</strong><br>
+                            19. 10. 2026 · 10:00 – 11:00
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <form class="booking-summary" action="#" method="post">
+            <h2>3. Dokončite rezerváciu</h2>
+            <p>Na rezerváciu nie je potrebná registrácia.</p>
+            <h3>Salón Bella</h3>
+            <p class="muted">Hlavná 12, Žilina</p>
+            <div class="summary-line"><span class="muted">Služba</span><span>Manikúra</span></div>
+            <div class="summary-line"><span class="muted">Dátum</span><span>19. 10. 2026</span></div>
+            <div class="summary-line"><span class="muted">Čas</span><span>10:00 – 11:00</span></div>
+            <div class="summary-line summary-total"><span>Cena spolu</span><span>25 €</span></div>
+            <h3>Vaše kontaktné údaje</h3>
+            <label for="name">Meno a priezvisko *</label>
+            <input id="name" name="name" type="text" placeholder="Zadajte meno a priezvisko" required>
+            <label for="email">E-mail *</label>
+            <input id="email" name="email" type="email" placeholder="Zadajte e-mailovú adresu" required>
+            <label for="phone">Telefón *</label>
+            <input id="phone" name="phone" type="tel" required>
+            <p class="required-note">* Povinné údaje</p>
+            <button class="button-dark full-button" type="submit">Rezervovať termín</button>
+        </form>
+    </div>
+</main>
+
+<footer class="site-footer">
+    <span>© 2026 BookIt. Všetky práva vyhradené.</span>
+    <nav class="footer-nav" aria-label="Pätička">
+        <a href="#">O nás</a>
+        <a href="#">Kontakt</a>
+    </nav>
+</footer>
+</body>
+</html>

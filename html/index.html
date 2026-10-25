@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BookIt - Vyhľadať služby</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="site-header">
+    <a class="logo" href="index.html">BookIt</a>
+    <nav class="main-nav" aria-label="Hlavná navigácia">
+        <a href="index.html">Domov</a>
+        <a href="index.html" aria-current="page">Vyhľadať služby</a>
+        <a href="index.html">Moje rezervácie</a>
+    </nav>
+    <div class="account-actions">
+        <a class="button" href="#">Prihlásiť sa</a>
+        <a class="button button-dark" href="#">Registrovať</a>
+    </div>
+</header>
+
+<main class="page-content">
+    <section aria-labelledby="search-title">
+        <h1 id="search-title">Vyhľadať služby</h1>
+        <p class="lead">Nájdite poskytovateľa vo svojom okolí a rezervujte si termín.</p>
+        <form class="search-form" action="index.html" method="get">
+            <div class="field">
+                <label for="service">Služba alebo poskytovateľ</label>
+                <input id="service" name="service" type="search" placeholder="Napr. kaderníctvo, masáž, autoservis">
+            </div>
+            <div class="field">
+                <label for="city">Mesto alebo obec</label>
+                <select id="city" name="city">
+                    <option>Bratislava</option>
+                    <option>Žilina</option>
+                    <option>Košice</option>
+                </select>
+            </div>
+            <button class="button-dark" type="submit">Vyhľadať</button>
+        </form>
+    </section>
+
+    <div class="results-layout">
+        <aside class="filter-box" aria-label="Filtre vyhľadávania">
+            <div class="filter-heading">
+                <h2>Filtre</h2>
+                <a href="index.html">Vymazať</a>
+            </div>
+            <div class="field">
+                <label for="category">Kategória</label>
+                <select id="category">
+                    <option>Všetky služby</option>
+                </select>
+            </div>
+            <div class="field">
+                <label for="date">Dátum</label>
+                <select id="date">
+                    <option>Vyberte dátum</option>
+                </select>
+            </div>
+            <div class="field">
+                <label for="price">Cena</label>
+                <select id="price">
+                    <option>Bez obmedzenia</option>
+                </select>
+            </div>
+            <div class="field">
+                <label for="rating">Hodnotenie</label>
+                <select id="rating">
+                    <option>Všetky hodnotenia</option>
+                </select>
+            </div>
+            <label class="checkbox">
+                <input type="checkbox" name="today">
+                Len voľné termíny dnes
+            </label>
+            <button class="full-button" type="button">Použiť filtre</button>
+        </aside>
+
+        <section aria-labelledby="results-title">
+            <div class="results-heading">
+                <h2 id="results-title">6 poskytovateľov v Bratislave</h2>
+                <label class="sort">Zoradiť podľa
+                    <select>
+                        <option>Odporúčané</option>
+                        <option>Najlacnejšie</option>
+                        <option>Najlepšie hodnotené</option>
+                    </select>
+                </label>
+            </div>
+            <div class="cards">
+                <article class="card">
+                    <div class="placeholder"><span>Fotografia prevádzky</span></div>
+                    <div class="card-body">
+                        <div class="card-category">Kaderníctvo</div>
+                        <h3>Kaderníctvo Andrea</h3>
+                        <div class="card-address">Ružinov, Záhradnícka 42</div>
+                        <div class="card-price"><span>☆ 4,8 (124 hodnotení)</span><strong>od 18 €</strong></div>
+                        <div class="availability">Voľný termín: Dnes o 14:30</div>
+                        <a class="button" href="detail.html">Zobraziť termíny</a>
+                    </div>
+                </article>
+                <article class="card">
+                    <div class="placeholder"><span>Fotografia prevádzky</span></div>
+                    <div class="card-body">
+                        <div class="card-category">Masáže</div>
+                        <h3>Masáže Harmónia</h3>
+                        <div class="card-address">Staré Mesto, Špitálska 12</div>
+                        <div class="card-price"><span>☆ 4,9 (86 hodnotení)</span><strong>od 35 €</strong></div>
+                        <div class="availability">Voľný termín: Zajtra o 10:00</div>
+                        <a class="button" href="detail.html">Zobraziť termíny</a>
+                    </div>
+                </article>
+                <article class="card">
+                    <div class="placeholder"><span>Fotografia prevádzky</span></div>
+                    <div class="card-body">
+                        <div class="card-category">Kozmetika</div>
+                        <h3>Kozmetika Lucia</h3>
+                        <div class="card-address">Petržalka, Šustekova 8</div>
+                        <div class="card-price"><span>☆ 4,7 (63 hodnotení)</span><strong>od 25 €</strong></div>
+                        <div class="availability">Voľný termín: Zajtra o 13:00</div>
+                        <a class="button" href="detail.html">Zobraziť termíny</a>
+                    </div>
+                </article>
+                <article class="card">
+                    <div class="placeholder"><span>Fotografia prevádzky</span></div>
+                    <div class="card-body">
+                        <div class="card-category">Holičstvo</div>
+                        <h3>Pánske holičstvo Jozef</h3>
+                        <div class="card-address">Nové Mesto, Vajnorská 21</div>
+                        <div class="card-price"><span>☆ 4,9 (97 hodnotení)</span><strong>od 16 €</strong></div>
+                        <div class="availability">Voľný termín: Dnes o 16:00</div>
+                        <a class="button" href="detail.html">Zobraziť termíny</a>
+                    </div>
+                </article>
+                <article class="card">
+                    <div class="placeholder"><span>Fotografia prevádzky</span></div>
+                    <div class="card-body">
+                        <div class="card-category">Manikúra a pedikúra</div>
+                        <h3>Nechtové štúdio Nina</h3>
+                        <div class="card-address">Dúbravka, Saratovská 6</div>
+                        <div class="card-price"><span>☆ 4,6 (48 hodnotení)</span><strong>od 22 €</strong></div>
+                        <div class="availability">Voľný termín: Zajtra o 09:30</div>
+                        <a class="button" href="detail.html">Zobraziť termíny</a>
+                    </div>
+                </article>
+                <article class="card">
+                    <div class="placeholder"><span>Fotografia prevádzky</span></div>
+                    <div class="card-body">
+                        <div class="card-category">Autoservis</div>
+                        <h3>Autoservis Novák</h3>
+                        <div class="card-address">Ružinov, Galvaniho 15</div>
+                        <div class="card-price"><span>☆ 4,8 (112 hodnotení)</span><strong>od 30 €</strong></div>
+                        <div class="availability">Voľný termín: Zajtra o 08:00</div>
+                        <a class="button" href="detail.html">Zobraziť termíny</a>
+                    </div>
+                </article>
+            </div>
+            <p class="results-count">Zobrazených 6 zo 6 poskytovateľov</p>
+        </section>
+    </div>
+</main>
+
+<footer class="site-footer">
+    <span>© 2026 BookIt. Všetky práva vyhradené.</span>
+    <nav class="footer-nav" aria-label="Pätička">
+        <a href="#">O nás</a>
+        <a href="#">Kontakt</a>
+        <a href="#">Podmienky používania</a>
+    </nav>
+</footer>
+</body>
+</html>
